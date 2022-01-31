@@ -1,0 +1,14 @@
+<configuration>
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>%date{HH:mm:ss.SSS} [%t] %-5p %c{40}:%L - #O%X{orderId}# %m%n</pattern>
+    </encoder>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="console"/>
+  </root>
+  <logger name="de.cronn" level="INFO"/>
+  <logger name="de.telekom" level="INFO"/>
+  <logger name="org.hibernate" level="WARN"/>
+  <logger name="org.springframework" level="WARN"/>
+</configuration>

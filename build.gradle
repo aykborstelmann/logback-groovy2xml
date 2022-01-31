@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.1"
+    implementation "ch.qos.logback:logback-classic:1.2.10"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+    testImplementation 'de.cronn:validation-file-assertions:0.2.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
